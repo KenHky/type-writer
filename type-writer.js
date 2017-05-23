@@ -41,7 +41,7 @@
     typeDom.style.width = textLength + (chineseType ? 'em' : 'ch');
     typeDom.style.animationName = 'typing, caret';
     typeDom.style.animationIterationCount = '1, infinite';
-    typeDom.style.animationDuration = textLength / 4 + 's, 1s';
+    typeDom.style.animationDuration = textLength / 5 + 's, 1s';
     typeDom.style.animationTimingFunction = 'steps(' + textLength + '), steps(1)';
 
     animationEvent && typeDom.addEventListener(animationEvent, function() {
