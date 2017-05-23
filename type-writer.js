@@ -4,7 +4,7 @@
   // base css
   var css = document.createElement("style");
   css.type = "text/css";
-  css.innerHTML = "@keyframes typing { from { width: 0 } } @keyframes caret { 50% { border-right-color: inherit; } } .typist { width: 0; white-space: nowrap; overflow: hidden; border-right: .05em solid transparent; }";
+  css.innerHTML = "@keyframes typing { from { width: 0 } } @keyframes caret { 50% { border-right-color: inherit; } } .typist { width: 0; white-space: nowrap; overflow: hidden; border-right: .05em solid; border-right-color: transparent; }";
   document.head.appendChild(css);
 
   // compatibility
@@ -34,9 +34,9 @@
 
   function startAnimate (domArray) {
     var typeDom = domArray.shift()
-    var textLength = typeDom.innerText.length
+    var textLength = typeDom.textContent.length
     // check chinese or not
-    var chineseType = checkByCode(typeDom.innerText)
+    var chineseType = checkByCode(typeDom.textContent)
     // add animate
     typeDom.style.width = textLength + (chineseType ? 'em' : 'ch');
     typeDom.style.animationName = 'typing, caret';
