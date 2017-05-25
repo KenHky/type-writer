@@ -16,7 +16,7 @@
       'OAnimation':'oAnimationEnd',
       'MozAnimation':'animationend',
       'WebkitAnimation':'webkitAnimationEnd'
-    }
+    };
 
     for(t in animations){
       if( el.style[t] !== undefined ){
@@ -28,7 +28,7 @@
 
   // check chinese
   function checkByCode(s){
-    return s.charCodeAt()>255 ? true : false;
+    return s.charCodeAt() > 255 ? true : false;
   }
 
 
@@ -46,7 +46,7 @@
 
     animationEvent && typeDom.addEventListener(animationEvent, function() {
       if (domArray.length) {
-        typeDom.removeEventListener(animationEvent,function(){},true);
+        typeDom.removeEventListener(animationEvent, function(){}, true);
         // clear animate
         typeDom.style.animationPlayState= 'paused';
         typeDom.style.animationName = '';
@@ -58,7 +58,7 @@
     }, false);
   }
 
-  window.onload=function(){
+  window.onload = function(){
     var domArray = []
     var typist = document.querySelectorAll(".typist");
     for (var i = 0; i < typist.length; i++) {
